@@ -21,7 +21,7 @@ const mimeTypes = {
 };
 
 const server = http.createServer((req, res) => {
-  let filePath = path.join(DIR, req.url === '/' ? 'code.html' : req.url);
+  let filePath = path.join(DIR, req.url === '/' ? 'index.html' : req.url);
 
   const ext = path.extname(filePath).toLowerCase();
   const contentType = mimeTypes[ext] || 'application/octet-stream';
@@ -39,6 +39,6 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
   console.log(`\n✅ Server running at: http://localhost:${PORT}`);
-  console.log(`📄 Serving: code.html`);
+  console.log(`📄 Serving: index.html`);
   console.log(`\nPress Ctrl+C to stop the server.\n`);
 });

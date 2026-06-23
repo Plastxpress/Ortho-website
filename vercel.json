@@ -1,8 +1,0 @@
-{
-  "buildCommand": null,
-  "outputDirectory": ".",
-  "rewrites": [
-    { "source": "/", "destination": "/code.html" },
-    { "source": "/(.*)", "destination": "/code.html" }
-  ]
-}
